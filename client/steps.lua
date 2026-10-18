@@ -43,10 +43,10 @@ Open the full map from the pause menu (<b>Esc</b> → Map) to set a waypoint.]==
     },
     {
         section = "Freeroam", title = "Join a race — anywhere", needs = "spz-raceUI",
-        spot = { cx = true, bottom = "3.5vh", width = 300, height = 52, zoom = 1.1 },
+        spot = { cx = true, bottom = "3.5vh", width = 560, height = 52, zoom = 1.1 },
         body = [==[This pill is the race queue. Press [[E]] from anywhere to join the next race and [[E]] again to leave.<br><br>
 The first joiner starts a short countdown, then everyone in the queue votes. Missed it? Pressing [[E]] during the <b>warmup</b> still gets you a grid slot.<br>
-Joining a minigame takes you out of the queue automatically.]==],
+The pill next to it is the minigames hub: press [[minigames|M]] for it. Joining a minigame takes you out of the queue automatically.]==],
     },
     {
         section = "Freeroam", title = "Notifications",
