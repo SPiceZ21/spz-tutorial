@@ -46,7 +46,7 @@ Open the full map from the pause menu (<b>Esc</b> → Map) to set a waypoint.]==
         spot = { cx = true, bottom = "3.5vh", width = 560, height = 52, zoom = 1.1 },
         body = [==[This pill is the race queue. Press [[E]] from anywhere to join the next race and [[E]] again to leave.<br><br>
 The first joiner starts a short countdown, then everyone in the queue votes. Missed it? Pressing [[E]] during the <b>warmup</b> still gets you a grid slot.<br>
-The pill next to it is the minigames hub: press [[minigames|M]] for it. Joining a minigame takes you out of the queue automatically.]==],
+The pill next to it is the minigames hub: press [[minigames_hub|F7]] for it. Joining a minigame takes you out of the queue automatically.]==],
     },
     {
         section = "Freeroam", title = "Notifications",
@@ -135,7 +135,7 @@ In a race warmup press [[spz_warmuptune|Y]] to tune your race car before the lig
     {
         section = "Menus", title = "Speed cameras", needs = "spz-speedcam", dim = false, card = "br",
         open = Run("speedrecords"), close = CloseUIs,
-        body = [==[Speed traps sit around the map and record how fast you pass. [[speedrecords|F7]] shows the records — beat them for bragging rights.]==],
+        body = [==[Speed traps sit around the map and record how fast you pass. [[speedcam_records|F2]] shows the records — beat them for bragging rights.]==],
     },
     {
         section = "Menus", title = "Racing line & ghost", needs = "spz-raceline",
@@ -233,7 +233,7 @@ Clean racing raises your safety rating; contact and DNFs lower it.]==],
     {
         section = "Minigames", title = "Minigame hub", needs = "spz-minigames", dim = false, card = "br",
         open = function() exports["spz-minigames"]:OpenHub() end, close = CloseUIs,
-        body = [==[[[minigames|M]] opens the hub: <b>Bomb Tag</b>, <b>Demolition</b>, <b>Color Rush</b>, <b>Cyclone</b>, <b>Escalation</b>, <b>Rocket League</b>, <b>Hot Pursuit</b> and <b>Hide &amp; Seek</b>.<br>
+        body = [==[[[minigames_hub|F7]] opens the hub: <b>Bomb Tag</b>, <b>Demolition</b>, <b>Color Rush</b>, <b>Cyclone</b>, <b>Escalation</b>, <b>Rocket League</b>, <b>Hot Pursuit</b> and <b>Hide &amp; Seek</b>.<br>
 Pick a game to see its rooms and rules.]==],
     },
     {
@@ -270,7 +270,7 @@ Leave any time from the pause menu.]==],
     -- ── Done ─────────────────────────────────────────────────────────────────
     {
         section = "Done", title = "You're ready", card = "center", finale = true,
-        body = [==[Press [[E]] to join your first race, or [[minigames|M]] for a minigame.<br><br>
+        body = [==[Press [[E]] to join your first race, or [[minigames_hub|F7]] for a minigame.<br><br>
 Forgot something? <b>/help</b> lists everything, and <b>/tutorial</b> replays this tour.]==],
     },
 }
