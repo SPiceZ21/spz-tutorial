@@ -135,7 +135,7 @@ In a race warmup press [[spz_warmuptune|Y]] to tune your race car before the lig
     {
         section = "Menus", title = "Speed cameras", needs = "spz-speedcam", dim = false, card = "br",
         open = Run("speedrecords"), close = CloseUIs,
-        body = [==[Speed traps sit around the map and record how fast you pass. [[speedcam_records|F2]] shows the records — beat them for bragging rights.]==],
+        body = [==[Speed traps sit around the map and record how fast you pass. Open them from the quick menu ([[Z]] → Leaderboard → Speed Records) or /speedrecords — beat them for bragging rights.]==],
     },
     {
         section = "Menus", title = "Racing line & ghost", needs = "spz-raceline",
@@ -233,7 +233,7 @@ Clean racing raises your safety rating; contact and DNFs lower it.]==],
     {
         section = "Minigames", title = "Minigame hub", needs = "spz-minigames", dim = false, card = "br",
         open = function() exports["spz-minigames"]:OpenHub() end, close = CloseUIs,
-        body = [==[[[minigames_hub|F7]] opens the hub: <b>Bomb Tag</b>, <b>Demolition</b>, <b>Color Rush</b>, <b>Cyclone</b>, <b>Escalation</b>, <b>Rocket League</b>, <b>Hot Pursuit</b> and <b>Hide &amp; Seek</b>.<br>
+        body = [==[[[minigames_hub|F7]] opens the hub: <b>Bomb Tag</b>, <b>Demolition</b>, <b>Color Rush</b>, <b>Cyclone</b>, <b>Rocket League</b>, <b>Hot Pursuit</b> and <b>Hide &amp; Seek</b>.<br>
 Pick a game to see its rooms and rules.]==],
     },
     {
