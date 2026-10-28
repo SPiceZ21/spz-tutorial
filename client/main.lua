@@ -208,19 +208,20 @@ AddEventHandler("onResourceStop", function(res)
     end
 end)
 
--- First join: wait until the player is in the world, on foot or parked, with
--- nothing else on screen, for a few seconds in a row.
+-- First join: start as soon as the player is in the world with nothing else on
+-- screen. It used to also need them standing still for 6s in a row, and any
+-- movement restarted the count, so new players who drove off right away got
+-- the tour minutes late. Now ~1.5s of ready is enough, moving or not.
 CreateThread(function()
     if GetResourceKvpInt(KVP_DONE) == 1 then return end
     local calm = 0
-    while calm < 6 do
-        Wait(1000)
+    while calm < 3 do
+        Wait(500)
         local st = LocalPlayer.state
-        local ped = PlayerPedId()
         local ready = st.spawned ~= false and not st.spawnMenuOpen
             and NetworkIsPlayerActive(PlayerId()) and IsScreenFadedIn()
             and not IsNuiFocused() and not IsPlayerSwitchInProgress()
-            and GetEntitySpeed(ped) < 1.0 and canStart()
+            and canStart()
         calm = ready and (calm + 1) or 0
     end
     if GetResourceKvpInt(KVP_DONE) ~= 1 then startTour() end
